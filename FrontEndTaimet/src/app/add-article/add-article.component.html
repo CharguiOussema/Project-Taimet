@@ -1,0 +1,93 @@
+<div class="card mb-4">
+  <div class="card-header"><h3 style="text-align: center">Inscritpion</h3></div>
+  <div class="card-body">
+    <body>
+    <form  >
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="prenomNom" class="form-label">Prénom & Nom</label>
+          <input type="text" class="form-control" formControlName="prenomNom" id="prenomNom" >
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="prenomNomArabe" class="form-label">الاسم و اللقب</label>
+          <input type="text" class="form-control" formControlName="prenomNomArabe" id="prenomNomArabe" >
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="cin" class="form-label">Cin</label>
+          <input type="number" class="form-control" formControlName="cin"  id="cin" >
+        </div>
+        <div class="form-group col-md-6">
+          <label for="identifiantUnique" class="form-label">Identifiant Unique</label>
+          <input type="number" class="form-control" formControlName="identifiantUnique" id="identifiantUnique" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email" id="email" >
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="numTel" class="form-label">Numéro de téléphone</label>
+          <input type="tel" class="form-control" formControlName="numTel" id="numTel" >
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="dateNaissance" class="form-label">Date de Naissance</label>
+          <input type="date" class="form-control" formControlName="dateNaissance" id="dateNaissance" >
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="lieuNaissance" class="form-label">Lieu de Naissance</label>
+          <input type="text" class="form-control" formControlName="lieuNaissance" id="lieuNaissance" >
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lieuNaissanceArabe" class="form-label">مكان الولادة</label>
+          <input type="text" class="form-control" formControlName="lieuNaissanceArabe" id="lieuNaissanceArabe" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="rib" class="form-label">RIB</label>
+        <input type="number" class="form-control" formControlName="rib" id="rib" >
+      </div>
+      <div class="form-row ">
+        <div class="form-group col-md-4">
+          <label for="grade" class="form-label">Grade</label>
+          <select class="form-control" formControlName="grade" id ="grade">
+            <option [ngValue]="null"  disabled>choisir le grade </option>
+            <option ></option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="departement" class="form-label">Departement</label>
+          <select class="form-control" formControlName="departement" id ="departement">
+            <option [ngValue]="null"  disabled>choisir le département </option>
+            <option ></option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="fonction" class="form-label">Fonction</label>
+          <select class="form-control" formControlName="fonction" id ="fonction">
+            <option [ngValue]="null"  disabled>choisir la fonction </option>
+            <option ></option>
+          </select>
+
+        </div>
+      </div>
+
+
+
+
+
+
+      <button  class="btn btn-primary">Valider</button>
+
+    </form>
+    </body>
+  </div>
+</div>

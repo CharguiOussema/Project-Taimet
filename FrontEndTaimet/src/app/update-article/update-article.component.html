@@ -1,0 +1,66 @@
+
+
+<h1 style="text-align: center;color: #007bff;font-size: xx-large">Modifier Article</h1>
+<br>  <br>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/updatearticle/{{a.id}}">Modifier Article</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/articles">List Article <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <a class="nav-link" (click)="deconnexion()" href="/">Déconnexion <span class="sr-only">(current)</span></a>
+    </div>
+  </nav>
+
+<br>
+<br><br>
+
+<div class="col-md-8 offset-md-3">
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+    <div class="form-group">
+      <label>Id</label>
+      <input type="text" class="form-control" id="id" [(ngModel)]="a.id" name="id" readonly
+      formControlName="id" >
+    </div>
+    <div class="form-group">
+      <label>Nom</label>
+      <input type="text" class="form-control" id="nom" [(ngModel)]="a.nom" name="nom"
+             formControlName="nom" [ngClass]="{'is-invalid': nom&&nom.touched&&nom.invalid}">
+      <div class="invalid-feedback">
+        <div> Nom is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="a.description" name="description"
+             formControlName="description" [ngClass]="{'is-invalid': description&&description.touched&&description.invalid}">
+      <div class="invalid-feedback">
+        <div> Description is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Prix</label>
+      <input type="number" class="form-control" id="prix" [(ngModel)]="a.prix" name="prix"
+             formControlName="prix" [ngClass]="{'is-invalid': prix&&prix.touched&&prix.invalid}">
+      <div class="invalid-feedback">
+        <div> prix is required</div>
+      </div>
+    </div>
+      <div class="form-element">
+        <button  color="primary" type="submit" class="btn btn-success" style="background-color: darkcyan">Modifier</button>
+
+      </div>
+
+
+  </form>
+</div>

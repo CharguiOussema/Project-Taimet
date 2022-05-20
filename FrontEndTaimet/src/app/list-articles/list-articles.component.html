@@ -1,0 +1,55 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+
+   <br>
+    <h1 style="text-align: center;color: #007bff;font-size: xx-large">List Articles</h1>
+    <br>  <br>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/articles">List Articles</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/addarticle">Ajouter Article <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+        <a class="nav-link" (click)="deconnexion()" href="/">Déconnexion <span class="sr-only">(current)</span></a>
+      </nav>
+    </div>
+    <table class="table table-striped">
+
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Créé par</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let a of articles | async">
+        <td>{{a.id}}</td>
+        <td>{{a.nom}}</td>
+        <td>{{a.description}}</td>
+        <td>{{a.prix}}</td>
+        <td>{{a.user.prenom}} {{a.user.nom}}</td>
+
+        <td><button (click)="deleteArticle(a.id,a.user.login)" class="btn btn-danger">Supprimer</button>
+          <button (click)="updateArticle(a.id,a.user.login)" class="btn btn-info" style="margin-left: 10px">Modifier</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
